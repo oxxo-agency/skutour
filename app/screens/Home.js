@@ -2,47 +2,80 @@ import React from 'react';
 import {
     Text,
     TouchableOpacity,
-    View
+    View,
+    Image,
+    ImageBackground
 } from 'react-native';
 
 export default class Home extends React.Component {
 
     constructor(props) {
-		super(props);
-		this.state = {
-		};
-	}
-    
+        super(props);
+        this.state = {
+        };
+    }
+
     render() {
         let navigation = this.props.navigation;
-        
-        return(
+
+        return (
             <View
                 style={{
                     flex: 1,
-                    backgroundColor: 'blue',
-                    paddingTop: 30,
+                    backgroundColor: 'white',
                 }}
             >
-                <View>
-                    <TouchableOpacity 
-                        onPress={navigation.openDrawer}
-                    >
-                        <Text>Open Drawer</Text>
-                    </TouchableOpacity>
-                </View>
-
-                <View>
-                    <TouchableOpacity
+                <ImageBackground source={require('../../assets/women_ride.jpg')}
+                    style={{ width: '100%', height: '100%' }}
+                >
+                    <View
                         style={{
-                            backgroundColor: 'red'
+                            marginLeft: 30,
+                            marginTop: 60,
+                            width: 50
                         }}
                     >
-                        <Text>
-                            SCAN TO RIDE
-                        </Text>
-                    </TouchableOpacity>
-                </View>
+                        <TouchableOpacity
+                            onPress={navigation.openDrawer}
+                        >
+                            <Image
+                                style={{
+                                    width: 30,
+                                    height: 30
+                                }}
+                                source={require('../../assets/3_bar.png')}
+                            />
+                        </TouchableOpacity>
+                    </View>
+
+                    <View
+                        style={{
+                            alignItems: 'center',
+                            marginTop: 420
+                        }}
+                    >
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate('ScanQR')}
+                            style={{
+                                backgroundColor: '#FDCE3F',
+                                width: 190,
+                                height: 40,
+                                textAlign: 'center',
+                                borderRadius: 10,
+                                justifyContent: 'center'
+                            }}
+                        >
+                            <Text
+                                style={{
+                                    textAlign: 'center',
+                                    alignItems: 'center'
+                                }}
+                            >
+                                SCAN TO RIDE
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+                </ImageBackground>
             </View>
         );
     }

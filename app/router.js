@@ -6,30 +6,55 @@ import Auth from './screens/Auth';
 import SignIn from './screens/SignIn';
 import Home from './screens/Home';
 import History from './screens/History';
+import HowToRide from './screens/HowToRide';
 import Help from './screens/Help';
-import Settings from './screens/Settings';
+import ScanQR from './screens/ScanQR';
+import Setting from './screens/Setting';
+import Account from './screens/Account';
+import FaQ from './screens/FaQ';
+import TermsAndCondition from './screens/TermsAndCondition';
+import PrivacyPolicy from './screens/PrivacyPolicy';
 
 // SignedIn Screen
 const SignedIn = createDrawerNavigator({
 	Home: {
 		screen: Home,
 	},
+	ScanQR: {
+		screen: ScanQR,
+	},
 	History: {
 		screen: History
+	},
+	HowToRide: {
+		screen: HowToRide,
 	},
 	Help: {
 		screen: Help,
 	},
-	Settings: {
-		screen: Settings,
+	Setting: {
+		screen: Setting,
+	},
+	Account: {
+		screen: Account,
+	},
+	FaQ: {
+		screen: FaQ,
+	},
+	TermsAndCondition: {
+		screen: TermsAndCondition,
+	},
+	PrivacyPolicy: {
+		screen: PrivacyPolicy,
 	}
+
 }, {
 		hideStatusBar: true,
-		drawerBackgroundColor: 'rgba(255,255,255,.9)',
-		overlayColor: '#6b52ae',
+		drawerBackgroundColor: '#FDCE3F',
+		overlayColor: '#FDCE3F',
 		contentOptions: {
 			activeTintColor: '#fff',
-			activeBackgroundColor: '#6b52ae',
+			activeBackgroundColor: '#FDCE3F',
 		},
 	});
 

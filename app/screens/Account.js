@@ -6,7 +6,7 @@ import {
     Image
 } from 'react-native';
 
-export default class History extends React.Component {
+export default class Account extends React.Component {
 
     constructor(props) {
         super(props);

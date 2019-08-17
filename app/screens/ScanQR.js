@@ -6,7 +6,7 @@ import {
     Image
 } from 'react-native';
 
-export default class History extends React.Component {
+export default class ScanQR extends React.Component {
 
     constructor(props) {
         super(props);
@@ -44,18 +44,27 @@ export default class History extends React.Component {
                         marginHorizontal: 10,
                         alignItems: 'center',
                         justifyContent: 'center',
-                        marginTop: 180
+                        marginTop: 90
                     }}
                 >
+                    <View
+                        style={{
+                            backgroundColor: "grey",
+                            width: 200,
+                            height: 200,
+                            borderRadius: 10,
+                            marginBottom: 20
+                        }}
+                    >
+
+                    </View>
                     <Text
                         style={{
                             textAlign: 'center',
                             lineHeight: 40
                         }}
                     >
-                        Our team is ready to help you anytime and anywhere!
-                        {''}
-                        Customer service: 021-7447-039
+                        Scan the QR code to start the ride
                     </Text>
                 </View>
             </View>
