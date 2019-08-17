@@ -5,10 +5,13 @@ import { createStackNavigator, createBottomTabNavigator, createSwitchNavigator, 
 import Auth from './screens/Auth';
 import SignIn from './screens/SignIn';
 import Home from './screens/Home';
+import History from './screens/History';
+import Help from './screens/Help';
+import Settings from './screens/Settings';
 
 // SignedIn Screen
 const SignedIn = createDrawerNavigator({
-    Home: {
+	Home: {
 		screen: Home,
 	},
 	History: {
@@ -21,14 +24,14 @@ const SignedIn = createDrawerNavigator({
 		screen: Settings,
 	}
 }, {
-    hideStatusBar: true,
-    drawerBackgroundColor: 'rgba(255,255,255,.9)',
-    overlayColor: '#6b52ae',
-    contentOptions: {
-      activeTintColor: '#fff',
-      activeBackgroundColor: '#6b52ae',
-    },
-});
+		hideStatusBar: true,
+		drawerBackgroundColor: 'rgba(255,255,255,.9)',
+		overlayColor: '#6b52ae',
+		contentOptions: {
+			activeTintColor: '#fff',
+			activeBackgroundColor: '#6b52ae',
+		},
+	});
 
 export const SignedInContainer = createAppContainer(SignedIn);
 
@@ -38,9 +41,9 @@ const SignedOut = createStackNavigator({
 		screen: SignIn
 	},
 }, {
-	headerMode: 'none',
-	mode: 'modal',
-});
+		headerMode: 'none',
+		mode: 'modal',
+	});
 
 export const SignedOutContainer = createAppContainer(SignedOut);
 
@@ -56,10 +59,10 @@ const Index = createSwitchNavigator({
 		screen: SignedOutContainer
 	}
 }, {
-	headerMode: 'none',
-	mode: 'modal',
-	initialRouteName: "Auth"
-});
+		headerMode: 'none',
+		mode: 'modal',
+		initialRouteName: "Auth"
+	});
 
 export const IndexContainer = createAppContainer(Index);
 

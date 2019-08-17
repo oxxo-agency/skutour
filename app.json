@@ -4,6 +4,7 @@
     "slug": "skutour",
     "privacy": "public",
     "sdkVersion": "33.0.0",
+    "appKey": "skutour",
     "platforms": [
       "ios",
       "android",
